@@ -11,4 +11,5 @@ COPY . /app
 WORKDIR /app
 ENV my_api_key empty
 ENV dockerrun yes
+EXPOSE 7860
 CMD ["python3", "-u", "ChuanhuChatbot.py", "2>&1", "|", "tee", "/var/log/application.log"]
